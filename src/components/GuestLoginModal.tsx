@@ -159,11 +159,11 @@ const GuestLoginModal: React.FC<GuestLoginModalProps> = ({
       </DialogContent>
 
       <DialogActions>
-        <Button variant="outlined" onClick={handleCancel} color="error">
-          Cancel
-        </Button>
-        <Button variant="outlined" color="success" onClick={handleSubmit}>
+        <Button color="success" onClick={handleSubmit}>
           Save
+        </Button>
+        <Button color="error" onClick={handleCancel}>
+          Cancel
         </Button>
       </DialogActions>
     </Dialog>

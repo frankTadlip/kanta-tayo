@@ -62,7 +62,7 @@ const LoginPage = () => {
 
         {/* Google Sign In Button */}
         <Button
-          variant="contained"
+          variant="outlined"
           color="primary"
           startIcon={<Google />}
           fullWidth
@@ -75,7 +75,7 @@ const LoginPage = () => {
 
         {/* Facebook Sign In Button */}
         <Button
-          variant="contained"
+          variant="outlined"
           color="primary"
           startIcon={<Facebook />}
           fullWidth
