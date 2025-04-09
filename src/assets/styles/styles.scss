@@ -1,0 +1,17 @@
+// src/styles.scss
+// Importing global styles and variables
+$background-color: #f8f9fa; // Light gray background color
+
+// Global body styles
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+// App container styles or any other global styles
+.app-container {
+  height: 100vh;
+}

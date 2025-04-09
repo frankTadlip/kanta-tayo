@@ -1,0 +1,56 @@
+// src/LoginPage.scss
+// Fade-in effect for the main content after splash screen
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100vh; // Full height of the viewport
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc; // Light border for the container
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333; // Dark text for contrast
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.login-buttons {
+  width: 100%;
+  max-width: 400px; // Limit the width to avoid too wide buttons
+  display: flex;
+  flex-direction: column;
+  gap: 20px; // Space between buttons
+}
+
+.MuiButton-root {
+  height: 50px; // Consistent height for the buttons
+  font-size: 1rem; // Set a reasonable font size
+}
+
+.MuiButton-startIcon {
+  margin-right: 10px; // Adjust the icon spacing
+}
