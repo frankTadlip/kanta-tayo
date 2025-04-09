@@ -12,7 +12,7 @@ const App = () => {
     setTimeout(() => {
       // Simulate splash screen for 2 seconds
       setIsLoading(false);
-    }, 5000); // 5 seconds loading
+    }, 6000); // 5 seconds loading
   }, []);
 
   if (isLoading) {

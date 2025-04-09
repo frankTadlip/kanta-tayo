@@ -3,6 +3,7 @@ import { Button, Divider } from "@mui/material";
 import { Google, Facebook } from "@mui/icons-material"; // Google/Facebook icons
 import GuestLoginModal from "../components/GuestLoginModal"; // Import the GuestLoginModal component
 import User from "../classes/User"; // Import the User class
+import damulag from "../assets/images/damulag.gif"; // Importing the gif image
 
 import "../assets/styles/LoginPage.scss"; // Import the specific styles for LoginPage
 
@@ -27,7 +28,13 @@ const LoginPage = () => {
   return (
     <main className="login-page fade-in">
       <div className="login-container">
-        <h2>Welcome to KantaTayo</h2>
+        <div className="logo-container">
+          <img src={damulag} alt="Logo" className="logo" />
+        </div>
+        <h4 className="login-title">
+          Dahil wala kang Budget,
+          <span className="subtitle"> kaya ka na punta dito! </span>{" "}
+        </h4>
 
         {/* Guest Login Button */}
         <Button

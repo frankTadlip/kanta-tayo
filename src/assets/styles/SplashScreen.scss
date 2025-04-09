@@ -29,6 +29,8 @@
   height: 100px; // Make sure the height and width are the same for a perfect circle
   border-radius: 50%; // Makes the image circular
   object-fit: cover; // Ensures the image fits well within the circle
+  border: 5px solid #ccc; // Optional: adds a border around the image
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); // Adds a subtle drop shadow
 }
 
 .fade-out {

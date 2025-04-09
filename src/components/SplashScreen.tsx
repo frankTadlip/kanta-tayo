@@ -8,7 +8,7 @@ const SplashScreen = () => {
     // Simulate loading for 1-2 seconds
     setTimeout(() => {
       setFadeOut(true); // Enable fade-in effect
-    }, 5000); // 2 seconds
+    }, 6000); // 2 seconds
   }, []);
 
   return (

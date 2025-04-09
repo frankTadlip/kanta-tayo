@@ -23,13 +23,37 @@
 }
 
 .login-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border: 1px solid #ccc; // Light border for the container
+  border: 5px solid #ccc; // Light border for the container
   border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); // Adds a subtle drop shadow
+
+  .login-title {
+    margin-top: 60px; // Space above the title
+    color: #333; // Dark text for contrast
+    margin-bottom: 20px; // Space below the title
+
+    .subtitle {
+      display: block;
+    }
+  }
+
+  .logo-container {
+    position: absolute;
+    top: -25%; // Position the logo above the container
+
+    .logo {
+      height: 150px;
+      width: 150px; // Set a fixed size for the logo
+      border: 5px solid #ccc; // Light border for the logo
+      border-radius: 50%;
+    }
+  }
 }
 
 h2 {
