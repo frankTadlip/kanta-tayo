@@ -66,7 +66,6 @@ const GuestLoginModal: React.FC<GuestLoginModalProps> = ({
       userInfo.firstName &&
       userInfo.lastName &&
       userInfo.nickname &&
-      userInfo.birthday &&
       userInfo.gender
     ) {
       // Create an instance of User and pass it to the parent
@@ -74,7 +73,6 @@ const GuestLoginModal: React.FC<GuestLoginModalProps> = ({
         userInfo.firstName,
         userInfo.lastName,
         userInfo.nickname,
-        userInfo.birthday.toISOString(), // Convert Date to ISO String
         userInfo.gender
       );
       onSubmit(user); // Pass the User object
@@ -161,10 +159,10 @@ const GuestLoginModal: React.FC<GuestLoginModalProps> = ({
       </DialogContent>
 
       <DialogActions>
-        <Button onClick={handleCancel} color="primary">
+        <Button variant="outlined" onClick={handleCancel} color="error">
           Cancel
         </Button>
-        <Button variant="contained" color="success" onClick={handleSubmit}>
+        <Button variant="outlined" color="success" onClick={handleSubmit}>
           Save
         </Button>
       </DialogActions>

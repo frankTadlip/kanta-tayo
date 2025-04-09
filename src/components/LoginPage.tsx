@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Divider } from "@mui/material";
 import { Google, Facebook } from "@mui/icons-material"; // Google/Facebook icons
+import { useNavigate } from "react-router-dom";
+
 import GuestLoginModal from "../components/GuestLoginModal"; // Import the GuestLoginModal component
 import User from "../classes/User"; // Import the User class
 import damulag from "../assets/images/damulag.gif"; // Importing the gif image
@@ -8,7 +10,15 @@ import damulag from "../assets/images/damulag.gif"; // Importing the gif image
 import "../assets/styles/LoginPage.scss"; // Import the specific styles for LoginPage
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false); // To manage modal visibility
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      navigate("/home"); // Redirect to home page if already logged in
+    }
+  }, [navigate]);
 
   const handleGuestLogin = () => {
     setOpenModal(true); // Open the modal
@@ -21,8 +31,10 @@ const LoginPage = () => {
   const handleSubmitGuestInfo = (user: User) => {
     // Handle the user info after guest login
     console.log("Guest user info:", user);
+    // Save user data to localStorage
+    localStorage.setItem("user", JSON.stringify(user));
     // Proceed to home page (for now, just console log or redirect to home screen)
-    window.location.href = "/home"; // Replace with your routing logic
+    navigate("/home");
   };
 
   return (
